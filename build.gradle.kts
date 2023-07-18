@@ -4,6 +4,7 @@ plugins {
     id("dev.architectury.architectury-pack200") version "0.1.3"
     id("com.github.johnrengelman.shadow") version "8.1.1"
     id("net.kyori.blossom") version "1.3.1"
+ //   id("io.gitlab.arturbosch.detekt") version ("1.23.0")
 }
 
 group = "de.tomjuri"
@@ -31,6 +32,7 @@ dependencies {
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT:processor")
 
     modRuntimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.1.2")
+  //  detektPlugins("io.gitlab.arturbosch.detekt:detekt-formatting:1.23.0")
 
     embed("org.jetbrains.kotlin:kotlin-stdlib:1.9.0")
 }
@@ -55,7 +57,7 @@ loom {
 
     forge {
         pack200Provider.set(dev.architectury.pack200.java.Pack200Adapter())
-        mixinConfig("mixins.examplemod.json")
+        mixinConfig("mixins.cropmaster.json")
     }
 }
 
@@ -67,7 +69,7 @@ tasks {
                         "TweakOrder" to "0",
                         "ForceLoadAsMod" to true,
                         "TweakClass" to "cc.polyfrost.oneconfig.loader.stage0.LaunchWrapperTweaker",
-                        "MixinConfigs" to "mixins.examplemod.json"
+                        "MixinConfigs" to "mixins.cropmaster.json"
                 )
         )
         dependsOn(shadowJar)
@@ -79,7 +81,7 @@ tasks {
     }
 
     shadowJar {
-        relocate("kotlin", "de.tomjuri.examplemod.relocate.kotlin")
+        relocate("kotlin", "de.tomjuri.cropmaster.relocate.kotlin")
         configurations = listOf(embed)
     }
 

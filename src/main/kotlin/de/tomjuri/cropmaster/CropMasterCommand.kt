@@ -1,16 +1,15 @@
-package de.tomjuri.examplemod
+package de.tomjuri.cropmaster
 
 import cc.polyfrost.oneconfig.utils.commands.annotations.Command
 import cc.polyfrost.oneconfig.utils.commands.annotations.Main
-import de.tomjuri.examplemod.mixin.MinecraftInvoker
 import net.minecraft.client.Minecraft
 import net.minecraft.util.ChatComponentText
 
 @Command(value = "examplecommand")
-class ExampleCommand {
+class CropMasterCommand {
 
     @Main
     private fun main() {
-        Minecraft.getMinecraft().thePlayer.addChatMessage(ChatComponentText("§c${ExampleMod.config.exampleText}"))
+        Minecraft.getMinecraft().thePlayer.addChatMessage(ChatComponentText("§c${CropMaster.config.exampleText}"))
     }
 }

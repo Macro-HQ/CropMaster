@@ -1,8 +1,8 @@
 [
   {
-    "modid": "examplemod",
-    "name": "ExampleMod",
-    "description": "Exmaple Mod!",
+    "modid": "cropmaster",
+    "name": "CropMaster",
+    "description": "Hypixel SkyBlock farming macro.",
     "version": "${version}",
     "mcversion": "1.8.9",
     "url": "",

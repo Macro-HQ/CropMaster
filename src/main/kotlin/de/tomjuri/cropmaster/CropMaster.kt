@@ -1,20 +1,20 @@
-package de.tomjuri.examplemod
+package de.tomjuri.cropmaster
 
 import cc.polyfrost.oneconfig.utils.commands.CommandManager
 import net.minecraftforge.fml.common.Mod
 import net.minecraftforge.fml.common.event.FMLInitializationEvent
 
-@Mod(modid = "examplemod", name = "Example Mod", version = "%%VERSION%%")
-class ExampleMod {
+@Mod(modid = "cropmaster", name = "CropMaster", version = "%%VERSION%%")
+class CropMaster {
 
     companion object {
-        lateinit var config: ExampleModConfig
+        lateinit var config: CropMasterConfig
     }
 
     @Mod.EventHandler
     fun onInit(event: FMLInitializationEvent) {
-        config = ExampleModConfig()
-        CommandManager.register(ExampleCommand())
+        config = CropMasterConfig()
+        CommandManager.register(CropMasterCommand())
         println("Sup world")
     }
 }
