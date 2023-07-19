@@ -8,5 +8,6 @@ enum class Crop {
     PUMPKIN,
     MELON,
     COCOABEAN,
-    SUGARCANE
+    SUGARCANE,
+    MUSHROOM
 }

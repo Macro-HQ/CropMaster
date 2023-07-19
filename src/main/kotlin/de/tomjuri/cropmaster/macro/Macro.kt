@@ -1,11 +1,11 @@
 package de.tomjuri.cropmaster.macro
 
-import de.tomjuri.cropmaster.enumeration.Crop
-import de.tomjuri.cropmaster.enumeration.FarmType
+import de.tomjuri.cropmaster.enumeration.YawRotation
+import de.tomjuri.cropmaster.util.KeyBindUtil.KeyBindConfig
 
-abstract class Macro(val farmType: FarmType, vararg val crops: Crop, val yaw: Float, val pitch: Float) {
+abstract class Macro(yawRotation: YawRotation, pitch: Float) {
     var running = false
-    protected abstract var state: State
+    protected lateinit var state: MacroState
     abstract fun tick()
-    interface State { fun bgalls() }
+    interface MacroState { fun getKeyBindConfig(): KeyBindConfig }
 }
