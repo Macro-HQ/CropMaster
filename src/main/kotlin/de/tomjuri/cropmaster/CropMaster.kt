@@ -8,13 +8,15 @@ import net.minecraftforge.fml.common.event.FMLInitializationEvent
 class CropMaster {
 
     companion object {
-        lateinit var config: CropMasterConfig
+        @Mod.Instance("cropmaster")
+        lateinit var instance: CropMaster
     }
+
+    lateinit var config: CropMasterConfig
 
     @Mod.EventHandler
     fun onInit(event: FMLInitializationEvent) {
         config = CropMasterConfig()
         CommandManager.register(CropMasterCommand())
-        println("Sup world")
     }
 }

@@ -7,7 +7,7 @@ enum class Crop {
     NETHERWART,
     PUMPKIN,
     MELON,
-    COCOABEAN,
+    COCOA_BEAN,
     SUGARCANE,
     MUSHROOM
 }
